@@ -1,0 +1,18 @@
+<section class="border m-3 p-3 rounded bg-light">
+    <h4>Add New Todo</h4>
+    <form [formGroup]="addForm" (ngSubmit)="addTodo()">
+        <div class="mb-3">
+            <label for="title" class="form-label">Todo Title</label>
+            <input formControlName="title" type="text" class="form-control btn-outline-info" id="title" name="title">
+        </div>
+        <div class="mb-3">
+            <label for="desc" class="form-label">Todo Description</label>
+            <textarea formControlName="desc" class="form-control btn-outline-info" id="desc" name="desc" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-outline-primary tdaB"
+            style="width: 20%; margin-left: 40%;">Primary</button>
+    </form>
+</section>
+<section class="border m-3 p-3 pt-0 rounded bg-light">
+    <app-todos></app-todos>
+</section>

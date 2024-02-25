@@ -1,0 +1,9 @@
+<section class="m-3 mt-0">
+    <h4 class="bg-light text-center py-4 sticky-top">Your Todo's for today</h4>
+    <div class="text-center" *ngIf="this.filteredTodoList.length===0; else elseBlock">No Todos to display</div>
+    <ng-template #elseBlock>
+        <section class="container border rounded p-3 mb-3" *ngFor="let todo of filteredTodoList;">
+            <app-todo (UTodo)="updateList()" [todo]="todo"></app-todo>
+        </section>
+    </ng-template>
+</section>

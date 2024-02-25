@@ -1,0 +1,7 @@
+<h5 [ngClass]="{'strike': !todo.active}">{{todo.title}}</h5>
+<p [ngClass]="{'strike': !todo.active}" class="ms-4">{{todo.desc}}</p>
+<div class="form-group form-check my-2">
+    <input (click)="markasdone()" type="checkbox" class="form-check-input" id="MaD{{todo.sno}}" [checked]="!todo.active">
+    <label class="form-check-label" for="MaD{{todo.sno}}">Done</label>
+</div>
+<button (click)="deleteTodo(todo)" type="button" class="btn btn-outline-danger">Delete todo</button>
